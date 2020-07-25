@@ -1,0 +1,155 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #8a7c5f;
+  font-family: "Manjari", sans-serif;
+}
+
+/*******************
+* body>header.title
+********************/
+header.title {
+  margin: 5%;
+}
+
+.title h1 {
+  color: #fffefa;
+  text-align: center;
+  font-size: calc(1.3rem + 2vw);
+  text-transform: uppercase;
+}
+
+/********************
+* body>div.container
+*********************/
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.container>.logo,
+.container>.content,
+.container>.footer,
+.container>div {
+  background: #7a6f57;
+  padding: 3%;
+  border: 1px solid black;
+}
+
+.container>.logo,
+.container>.footer {
+  grid-column: span 5;
+  background: #1f1c11;
+  color: #fffefa;
+}
+
+.container>.content {
+  grid-column: span 3;
+}
+
+/*********************************
+* body>div.container>main.content
+**********************************/
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content>article {
+  background: #2e2c23;
+  color: #ebebeb;
+  flex: 1 1 auto;
+  margin: 2% 0;
+  padding: 3%;
+}
+
+.content>article>h1,
+.content>article>p {
+  padding: 3%;
+}
+
+/**********************************
+* body>div.container>aside.sidebar
+***********************************/
+.sidebar {
+  grid-column: span 2;
+  background: #2e2c23;
+  color: #fff;
+  padding: 0 5%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebar>div>img {
+  width: 100%;
+}
+
+/*************************************
+* body>div.container>div.related-post
+**************************************/
+div.related-post {
+  background: #2d3436;
+  color: #ffffff;
+  height: calc(5rem + 10vw);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s ease;
+}
+
+div.related-post:hover {
+  cursor: pointer;
+  color: #000;
+  background: #ffffff;
+}
+
+footer>h4 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
+  .container>.content {
+    grid-column: span 5;
+  }
+
+  .container>.sidebar {
+    grid-column: span 5;
+    padding: 3% 4%;
+  }
+
+  .container>.sidebar>div {
+    margin: 2% 0;
+  }
+
+  .container>.related-post {
+    grid-column: span 5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root{
+    font-size: 14px;
+  }
+}
